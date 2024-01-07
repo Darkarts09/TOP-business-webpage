@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOP Business Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/be04e0a143.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="#">Header Logo</a></div>
+        <ul class="links">
+          <li><a href="hero">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
+        <li><a href="hero">Home</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="action_btn">Get Started</a></li>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h1>Welcome</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur <br />
+          adipisicing elit.
+        </p>
+      </section>
+    </main>
+    <section id="team">
+      <div class="container">
+        <h2>Our Team</h2>
+        <small>Excellence in Web Development and IT</small>
+        <div class="team_container">
+          <!--Card 1-->
+          <div class="card">
+            <div class="img_wrapper">
+              <img src="images/img1.webp" alt="" />
+              <div class="button">
+                <img src="images/arrow.png" alt="" />
+              </div>
+            </div>
+            <div class="info">
+              <p>Mark Thompson</p>
+              <small>Operations Manager</small>
+            </div>
+          </div>
+          <!--Card 2-->
+          <div class="card">
+            <div class="img_wrapper">
+              <img src="images/img2.webp" alt="" />
+              <div class="button">
+                <img src="images/arrow.png" alt="" />
+              </div>
+            </div>
+            <div class="info">
+              <p>Sophie Hugh</p>
+              <small>Front End Developer</small>
+            </div>
+          </div>
+          <!--Card 3-->
+          <div class="card">
+            <div class="img_wrapper">
+              <img src="images/img3.webp" alt="" />
+              <div class="button">
+                <img src="images/arrow.png" alt="" />
+              </div>
+            </div>
+            <div class="info">
+              <p>Tina Gray</p>
+              <small>Back End Developer</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
